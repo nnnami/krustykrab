@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Sign In</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+        * {
+            font-family: 'Quicksand', sans-serif;
+        }
+        body {
+            background: url(img/background.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-large {
+            transition: all .38s ease;
+        }
+        .btn-large:hover {
+            transform: scale(1.1);
+            background-color: red;
+            color: white;
+        }
+        span.field-icon {
+        float: right;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container center">
+        <div class="card-panel" style="border-radius: 1rem; width: 400px;">
+            <h4 class="center-align"style="font-weight: bold;">Si<span class="red-text">gn</span> I<span class="red-text">n</Ispan></h4>
+            <form>
+                <div class="input-field">
+                    <i class="material-icons prefix red-text">account_circle</i>
+                    <input type="text" id="username" class="validate">
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix grey-text text-darken-2">lock</i>
+                    <input type="password" id="password" class="validate">
+                    <label for="password">Password</label>          
+                    <span toggle="#password" class="field-icon toggle-password"><span class="material-icons">visibility</span></span>
+                </div>
+                <a href="#">Forgot Password?</a> <br> <br>
+                <a href="index.html" class="btn-large red white-text" style="border-radius: 4rem;">Sign In</a>
+                <br><br>
+                <p class="red-text" style="font-weight: bold;">Welcome to the Best Burger in Town!</p>
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <!-- show password -->
+    <script>
+        var clicked = 0;
+
+        $(".toggle-password").click(function (e) {
+        e.preventDefault();
+
+        $(this).toggleClass("toggle-password");
+            if (clicked == 0) {
+            $(this).html('<span class="material-icons">visibility_off</span >');
+            clicked = 1;
+            } else {
+            $(this).html('<span class="material-icons">visibility</span >');
+                clicked = 0;
+            }
+
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+        });
+    </script>
+</body>
+</html>

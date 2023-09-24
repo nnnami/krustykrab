@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+*::selection {
+    color: white;
+    background-color: red;
+}
+body {
+    background-color: #1e1c2a;
+}
+nav {
+    font-weight: bolder;
+}
+span {
+    font-weight: bold;
+}
+.home-row {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+.about-row {
+    padding-top: 125px;
+    padding-bottom: 60px;
+}
+/* .container .responsive-img:hover {
+    transition: scale(1.2);
+} */
+.staffs-row {
+    padding-top: 125px;
+    padding-bottom: 60px;
+}
+.menu-row {
+    padding-top: 125px;
+    padding-bottom: 60px;
+}
+.service-row {
+    padding-bottom: 60px;
+}
+.contact-row {
+    padding-bottom: 60px;
+}
+.gallery-row {
+    padding-bottom: 10px;
+}
+.subscribe-row {
+    padding-bottom: 60px;
+}
+.question-row {
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+.parallax {
+    padding-bottom: 60px;
+}
+.parallax-container {
+height: 300px;
+}
+.btn-large {
+    transition: all .20s ease;
+}
+.btn-large:hover {
+transform: scale(1.1);
+color: white;
+}
+.icon i {
+transition: all .38s ease;
+}
+.icon i:hover {
+transform: scale(1.2);
+}
+.sidenav li a:hover{
+    color: red;
+}
+.container .menu-card {
+    transition: all .20s ease;
+    border-radius: .5rem;
+}
+.container .card-action {
+    font-weight: bold;
+}
+.container .menu-card:hover {
+    transform: translateY(-10px);
+    border: 10px solid red;
+    border-radius: 1rem;
+}
+.container .staff-img {
+    transition: all .20s ease;
+}
+.container .staff-img:hover {
+    transform: translateY(-10px);
+    transform: scale(1.2);
+}
+.container .staff-card {
+    transition: all .20s ease;
+    border: 10px double red;
+}
+.container .staff-card:hover {
+    transform: translateY(-10px);
+    background-color: #75e7ff;
+    border-radius: 3rem;
+}
+@media screen  and (max-width: 1000px){
+    .logo {
+        width: 300px;
+    }
+}
+@media screen  and (max-width: 400px) {
+    .home-title {
+        font-size: 3rem;
+    }
+    .container .brand-logo {
+        font-size: 1.5rem;
+    }
+    .container .email-text {
+        font-size: .9rem;
+    }
+    .container .card-action {
+        font-size: .7rem;
+    }
+}
+.gallery-photo {
+    transition: 0.3s;
+}
+.gallery-photo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.about-img {
+    transition: 0.3s
+}
+.about-img:hover {
+    transform: scale(1.2);
+}
+.about-des {
+    transition: all .25s ease;
+}
+.about-des:hover {
+    transform: translateY(-10px);
+    background-color: grey;
+    cursor: auto;
+    border: 8px darkgrey outset;
+    padding: 15px 15px;
+}
+.staff-img a {
+    transition: 0.3s;
+}
+.staff-img a:hover {
+    transform: scale(1.2);
+}
+.staff-img i:hover {
+    color: black;
+    transform: scale(1.2);
+}

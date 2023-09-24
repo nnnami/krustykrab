@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Register</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    * {
+        font-family: 'Quicksand', sans-serif;
+    }
+    body {
+        background: url(img/background.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+    .container .row {
+        margin: 5px;
+        padding-top: 150px;
+    }
+    .btn-large {
+        transition: all .38s ease;
+    }
+    .btn-large:hover {
+        transform: scale(1.1);
+        background-color: red;
+        color: white;
+    }
+    span.field-icon {
+        float: right;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+</style>
+</head>
+<body>
+    <div class="container center">
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="card-panel" style="border-radius: 1rem; padding-bottom: 2.6rem;">
+                    <h4 class="center-align"style="font-weight: bold;">R<span class="red-text">eg</span>ist<span class="red-text">er</span></h4>
+                    <form>
+                        <div class="input-field">
+                            <i class="material-icons prefix red-text">account_circle</i>
+                            <input type="text" id="username" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix grey-text text-darken-2">lock</i>
+                            <input type="password" id="password" class="validate">
+                            <label for="password">Password</label>     
+                            <span toggle="#password" class="field-icon toggle-password"><span class="material-icons">visibility</span></span>     
+                        </div>
+                        <a href="#">Need Help?</a>
+                        <p>
+                            <label>
+                              <input type="checkbox"/>
+                              <span class="black-text">I agree to the terms & conditions</span>
+                            </label>
+                          </p>
+                        <a href="index.html" class="btn-large red white-text" style="border-radius: 4rem;">Register</a>
+                        <p class="red-text" style="font-weight: bold;">"Come Spend Your Money Here!"</p> 
+                    </form>
+                </div>
+            </div>
+            <div class="col s12 l6">
+                <div class="card-panel" style="border-radius: 1rem;">
+                    <h4 class="center-align" style="font-weight: bold;">Contact <span class="red-text">Info</span></h4>
+                    <form>
+                        <div class="input-field">
+                            <i class="material-icons prefix green-text text-darken-3">person</i>
+                            <input type="text" id="fullname" class="validate">
+                            <label for="fullname">Enter Fulll Name</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix red-text">email</i>
+                            <input type="email" id="email" name="email" class="validate">
+                            <label for="email">Enter Email Address</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix blue-text text-darken-2">location_on</i>
+                            <input type="text" id="address" name="address" class="validate">
+                            <label for="address">Enter Address</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix green-text">phone</i>
+                            <input id="telNo" name="telNo" type="tel" class="validate">
+                            <label for="telNo">Enter Phone Number</label>
+                        </div>
+                        <p class="red-text" style="font-weight: bold;">"We shall never deny a guest, even the most ridiculous request,"</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <!-- show password -->
+    <script>
+        var clicked = 0;
+
+        $(".toggle-password").click(function (e) {
+        e.preventDefault();
+
+        $(this).toggleClass("toggle-password");
+            if (clicked == 0) {
+            $(this).html('<span class="material-icons">visibility_off</span >');
+            clicked = 1;
+            } else {
+            $(this).html('<span class="material-icons">visibility</span >');
+                clicked = 0;
+            }
+
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+    </script>
+</body>
+</html>
