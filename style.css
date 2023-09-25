@@ -16,16 +16,13 @@ span {
     font-weight: bold;
 }
 .home-row {
-    padding-top: 120px;
+    padding-top: 125px;
     padding-bottom: 60px;
 }
 .about-row {
     padding-top: 125px;
     padding-bottom: 60px;
 }
-/* .container .responsive-img:hover {
-    transition: scale(1.2);
-} */
 .staffs-row {
     padding-top: 125px;
     padding-bottom: 60px;
